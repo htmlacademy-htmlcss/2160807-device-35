@@ -1,0 +1,195 @@
+@font-face {
+  font-family:"Raleway";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family:"Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family:"Rubik";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
+  font-display: swap;
+}
+body{
+  font-family:"Rubik";
+  font-size: 18px;
+  line-height: 30px;
+  background-color: white;
+  color: black;
+}
+.main-header{
+  background-color: #FFE17F;
+}
+.navigation{
+  font-family: "Raleway";
+  text-transform: uppercase;
+  line-height: 21px;
+}
+.catalog-header{
+  font-family: "Raleway";
+  text-transform: uppercase;
+  line-height: 21px;
+}
+.slider-pagination-title{
+  font-family: "Raleway";
+  font-size: 50px;
+  line-height: 50px;
+}
+.slider-pagination-detailed{
+  font-family: "Raleway";
+  text-transform: uppercase;
+}
+.feature-title{
+  font-size: 36px;
+}
+.feature-item span{
+  font-size: 16px;
+}
+.category-catalog-link{
+  font-family: "Raleway";
+}
+.advantages-group-item{
+  font-family: "Raleway";
+  text-transform: uppercase;
+}
+.advantages-description-title{
+  font-family: "Raleway";
+  font-size: 50px;
+  line-height: 50px;
+}
+.delivery-button{
+  font-family: "Raleway";
+  font-size: 20px;
+  line-height: 23px;
+  text-transform: uppercase;
+}
+.index-columns h2{
+  font-family: "Raleway";
+  font-size: 50px;
+  line-height: 50px;
+}
+.about-transport-company-item{
+  font-weight: 700;
+  line-height: 20px;
+}
+.about-link{
+  font-family: "Raleway";
+  text-transform: uppercase;
+}
+.contacts-subtitle{
+  font-weight: 700;
+  font-size: 24px;
+}
+.contacts-link{
+  font-family: "Raleway";
+  text-transform: uppercase;
+}
+.mailing{
+  background-color: #F0F0F0;
+}
+.mailing-title{
+  font-family: "Raleway";
+  font-size: 50px;
+  line-height: 50px;
+}
+.button-mailing{
+  font-family: "Raleway";
+  line-height: 21px;
+  text-transform: uppercase;
+}
+.main-footer{
+  background-color: #444444;
+  color: white;
+}
+.footer-address-text{
+  font-size: 16px;
+}
+.footer-menu-link{
+  font-family: "Raleway";
+  line-height: 21px;
+  text-transform: uppercase;
+}
+.contacts-phone{
+  font-size: 16px;
+}
+.catalog-main{
+  background-color: #F0F0F0;
+}
+.breadcrumbs{
+  background-color: white;
+}
+.breadcrumbs-title{
+  font-family: "Raleway";
+  font-size: 50px;
+  line-height: 50px;
+}
+.breadcrumbs-link{
+  font-size: 16px;
+}
+.catalog-filter-title{
+  font-family: "Raleway";
+  line-height: 21px;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.catalog-filter-subtitle{
+  font-weight: 700;
+}
+.color-item label{
+  font-size: 16px;
+  line-height: 20px;
+}
+.bluetooth-item label{
+  font-size: 16px;
+  line-height: 20px;
+}
+.filter-button{
+  font-family: "Raleway";
+  line-height: 21px;
+  text-transform: uppercase;
+}
+.catalog-sorting-title{
+  font-family: "Raleway";
+  line-height: 21px;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.catalog-card-content-title{
+  font-weight: 700;
+}
+.catalog-download-more{
+  font-family: "Raleway";
+  line-height: 21px;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.catalog-pagination-button-next{
+  font-family: "Raleway";
+  line-height: 21px;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.catalog-pagination-button-back{
+  font-family: "Raleway";
+  line-height: 21px;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.catalog-pagination-number{
+  font-size: 16px;
+}
+.catalog-menu{
+  background-color: white;
+}
+.catalog-pagination{
+  background-color: #F0F0F0;
+}
