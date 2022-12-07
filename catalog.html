@@ -7,9 +7,9 @@
   </head>
   <body>
 <header class="main-header">
-  <h1 class="catalog-monopods-title">Моноподы для селфи</h1>
+  <h1 class="catalog-monopods-title visually-hidden">Моноподы для селфи</h1>
   <nav class="navigation">
-  <a href="index.html">
+  <a href="index.html" class="logo-header">
     <img src="images/logo.png" class="logo" width="145" height="36" alt="логотип">
   </a>
 <div class="user-menu">
@@ -18,10 +18,15 @@
     <input type="text" placeholder="Поиск по сайту">
     <button class="menu-search-button" type="submit">Найти</button>
   </form>
-  <ul class="user-menu-list">
-    <li class="user-menu-item">
-  <a href="#" class="header-login">Войти</a>
+  <ul class="user-login-list">
+    <li class="user-login-item">
+      <a href="#" class="header-login">Коля Петухов</a>
+        </li>
+    <li class="user-login-item close">
+       <a href="#" class="header-login closer">Выйти</a>
     </li>
+  </ul>
+  <ul class="user-menu-list">
     <li class="user-menu-item">
     <a href="#" class="menu-right-compare">Сравнить</a>
   </li>
@@ -60,29 +65,31 @@
   </div>
 </header>
 <main class="catalog-main">
-<section class="catalog">
+<section class="catalog-filter-products">
   <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
   <h2 class="catalog-filter-title">Фильтр:</h2>
-  <fieldset class="catalog-filter-group">
+  <fieldset class="catalog-filter-group range-group">
     <legend class="catalog-filter-subtitle">Стоимость</legend>
-    <div class="range">
+    <div class="range-scale">
+      <div class="range-bar">
     <button class="range-toggle toggle-min">
       <span class="visually-hidden">Изменить минимальную цену</span>
     </button>
     <button class="range-toggle toggle-max">
       <span class="visually-hidden">Изменить максимальную цену</span>
     </button>
+      </div>
+    </div>
     <div class="range-wrapper-inputs">
       <label class="catalog-filter-label">
-        от <input class="range-input" type="number"  name="min-price">
+        от <input class="range-input" type="number"  name="min-price" placeholder="0">
       </label>
       <label class="catalog-filter-label">
-        до <input class="range-input" type="number"  name="max-price">
+        до <input class="range-input" type="number"  name="max-price" placeholder="5000">
       </label>
     </div>
-    </div>
   </fieldset>
-  <fieldset class="catalog-filter-group">
+  <fieldset class="catalog-filter-group color-group">
     <legend class="catalog-filter-subtitle">Цвет</legend>
     <ul class="color-list">
       <li class="color-item">
@@ -131,8 +138,10 @@
   <option class="catalog-sorting-select-item">Цена по возрастанию</option>
   <option class="catalog-sorting-select-item">Цена по убыванию</option>
 </select>
-<button class="catalog-sorting-up visually-hidden">Вверх</button>
-<button class="catalog-sorting-down visually-hidden">Вниз</button>
+<div class="catalog-sorting-button">
+<button class="catalog-sorting-up"> </button>
+<button class="catalog-sorting-down"> </button>
+</div>
 </div>
 <div class="catalog-menu">
 <ul class="catalog-list">
@@ -210,8 +219,8 @@
   <a href="index.html" >
     <img src="images/logo-footer.png" class="logo" alt="логотип ">
   </a>
-  <address class="footer-address-text">Санкт-Петербург, набережная<br>реки Карповки, 5, литера П.</address>
   <div class="footer-navigation">
+  <p class="footer-address-text">Санкт-Петербург, набережная<br>реки Карповки, 5, литера П.</p>
     <ul class="footer-menu-list">
       <li class="footer-menu-item">
         <a href="#" class="footer-menu-link">Доставка</a>
@@ -223,21 +232,23 @@
         <a href="#" class="footer-menu-link">Контакты</a>
       </li>
     </ul>
+      <a class="contacts-phone" href="tel:+78128121212">Тел.:+7(812)812-12-12</a>
     </div>
-    <a class="contacts-phone" href="tel:+78128121212">Тел.:+7(812)812-12-12</a>
+    <div class="footer-bottom">
+    <hr color="#FFE17F" width="80px" size="7px">
     <ul class="footer-social-list">
       <li class="footer-social-item">
-        <a class="buttom-social" href="https://t.me/htmlacademy">
+        <a class="button-social" href="https://t.me/htmlacademy">
           <span class="visually-hidden">Телеграмм</span>
         </a>
       </li>
       <li class="footer-social-item">
-        <a class="buttom-social" href="https://www.youtube.com/user/htmlacademyru">
+        <a class="button-social" href="https://www.youtube.com/user/htmlacademyru">
           <span class="visually-hidden">YouTube</span>
         </a>
       </li>
       <li class="footer-social-item">
-        <a class="buttom-social" href="https://twitter.com/htmlacademy_ru">
+        <a class="button-social" href="https://twitter.com/htmlacademy_ru">
           <span class="visually-hidden">Twitter</span>
         </a>
       </li>
@@ -245,6 +256,7 @@
     <a class="html-academy-link" href=" https://htmlacademy.ru/" >
       <span class="visually-hidden">HTML-Academy</span>
     </a>
+    </div>
   </footer>
     </body>
   </html>

@@ -6,22 +6,24 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
+    <h1 class="index-title visually-hidden">Главная страница Интернет-магазина Девайс</h1>
 <header class="main-header">
-  <h1 class="index-title">Главная страница Интернет-магазина Девайс</h1>
   <nav class="navigation">
-<a href="index.html">
+<a href="index.html" class="logo-header">
   <img src="images/logo.png" class="logo" width="145" height="36" alt="логотип">
 </a>
+<h2 class="visually-hidden">Навигация сайта</h2>
   <div class="user-menu">
-  <h1 class="visually-hidden">Меню пользователя</h1>
   <form class="menu-search" method="get">
     <input type="text" placeholder="Поиск по сайту">
     <button class="menu-search-button" type="submit">Найти</button>
   </form>
+  <ul class="user-login-list">
+    <li class="user-login-item">
+      <a href="#" class="header-login">Войти</a>
+        </li>
+  </ul>
   <ul class="user-menu-list">
-    <li class="user-menu-item">
-  <a href="#" class="header-login">Войти</a>
-    </li>
     <li class="user-menu-item">
     <a href="#" class="menu-right-compare">Сравнить</a>
   </li>
@@ -30,7 +32,6 @@
   </li>
   </ul>
   </div>
-  <h2 class="visually-hidden">Навигация сайта</h2>
     <button class="catalog-header">Каталог товаров</button>
   <ul class="navigation-list">
     <li class="navigation-item">
@@ -48,17 +49,11 @@
 <main class="main-index">
 <section class="slider-index">
   <h2 class="visually-hidden">Слайдер</h2>
-  <div class="slider-controls">
-    <button class="slider-button slider-next" type="button">
-      <span class="visually-hidden">Предыдущий слайд</span>
-    </button>
-    <button class="slider-button slider-prev" type="button">
-      <span class="visually-hidden">Следующий слайд</span>
-    </button>
-  </div>
   <ol class="slider-pagination">
     <li class="slider-pagination-item active">
+      <span class="slider-number">01</span>
       <img src="images/slider-1.png" width="560" height="560" alt="Квадрокоптер">
+      <div class="slider-about-product">
       <h2 class="slider-pagination-title">Порхает как бабочка,<br>жалит как пчела!</h2>
       <p class="slider-description">Этот обычный, на первый взгляд, квадрокоптер оснащен<br>мощным лазером, замаскированным под стандартную камеру.</p>
       <a href="#" class="slider-pagination-detailed">Подробнее</a>
@@ -72,9 +67,12 @@
           <span>Радиус поражения</span>
         </li>
       </ul>
+      </div>
     </li>
     <li class="slider-pagination-item ">
+      <span class="slider-number">02</span>
       <img src="images/slider-2.png" width="560" height="560" alt="Фитнес-браслет">
+      <div class="slider-about-product">
       <h2 class="slider-pagination-title">Худеем<br>правильно!</h2>
       <p class="slider-description">Мотивирующие фитнес-браслеты помогут найти в себе силы<br>Mне пропускать занятия и соблюдать диету.</p>
       <a href="#" class="slider-pagination-detailed">Подробнее</a>
@@ -84,9 +82,12 @@
           <span>Без подзарядки</span>
         </li>
       </ul>
+      </div>
     </li>
     <li class="slider-pagination-item ">
+      <span class="slider-number">03</span>
       <img src="images/slider-3.png" width="560" height="560" alt="Селфи-палка">
+      <div class="slider-about-product">
       <h2 class="slider-pagination-title">Делай селфи,<br>как Бен Стиллер!</h2>
       <p class="slider-description">Самая длинная палка для селфи доступна в нашем магазине.<br>Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
       <a href="#" class="slider-pagination-detailed">Подробнее</a>
@@ -104,8 +105,17 @@
           <span>Материал</span>
         </li>
       </ul>
+      </div>
     </li>
   </ol>
+  <div class="slider-controls">
+    <button class="slider-button slider-next" type="button">
+      <span class="visually-hidden">Предыдущий слайд</span>
+    </button>
+    <button class="slider-button slider-prev" type="button">
+      <span class="visually-hidden">Следующий слайд</span>
+    </button>
+  </div>
 <ol class="indicator-list">
   <li class="indicator-item">
     <button class="indicator-button indicator-slider-1 active visually-hidden">1</button>
@@ -118,8 +128,8 @@
   </li>
 </ol>
 </section>
+<h2 class="visually-hidden">Категории каталога</h2>
 <ul class="category-catalog">
-  <h2 class="visually-hidden">Категории каталога</h2>
   <li class="category-catalog-item">
     <a href="#" class="category-catalog-link">Виртуальная<br>реальность</a>
   </li>
@@ -171,7 +181,12 @@
     </li>
   </ul>
 </div>
+<div class="delivery-index">
 <a href="#" class="delivery-button" >Доставим редкий товар под заказ</a>
+<button class="delivery-button-info" >
+  <span>i</span>
+</button>
+</div>
 <div class="index-columns">
 <section class="about">
   <h2 class="about-title">О нас</h2>
@@ -202,7 +217,7 @@
 </div>
 <div class="mailing">
   <h2 class="mailing-title">Подпишитесь<br>на рассылку</h2>
-  <p class="mailing-reason">Еженедельный дайджест с обзорами новинок,<br>длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
+  <p class="mailing-reason">Еженедельный дайджест с обзорами новинок,<br>длительными тест-драйвами, распаковками, а также акции,<br>спецпредложения и вот это вот всё.</p>
   <form action=" https://echo.htmlacademy.ru/" method="post" class="mailing-form">
     <input type="text" name="mailing" placeholder="Ваш e-mail" required>
     <button class="button-mailing" type="submit">Подписаться</button>
@@ -229,25 +244,29 @@
     </ul>
       <a class="contacts-phone" href="tel:+78128121212">Тел.:+7(812)812-12-12</a>
     </div>
+    <div class="footer-bottom">
+    <hr color="#FFE17F" width="80px" size="7px">
     <ul class="footer-social-list">
       <li class="footer-social-item">
-        <a class="buttom-social" href="https://t.me/htmlacademy">
+        <a class="button-social" href="https://t.me/htmlacademy">
           <span class="visually-hidden">Телеграмм</span>
         </a>
       </li>
       <li class="footer-social-item">
-        <a class="buttom-social" href="https://www.youtube.com/user/htmlacademyru">
+        <a class="button-social" href="https://www.youtube.com/user/htmlacademyru">
           <span class="visually-hidden">YouTube</span>
         </a>
       </li>
       <li class="footer-social-item">
-        <a class="buttom-social" href="https://twitter.com/htmlacademy_ru">
+        <a class="button-social" href="https://twitter.com/htmlacademy_ru">
           <span class="visually-hidden">Twitter</span>
         </a>
       </li>
     </ul>
     <a class="html-academy-link" href=" https://htmlacademy.ru/" >
       <span class="visually-hidden">HTML-Academy</span>
+    </a>
+    </div>
 </footer>
   </body>
 </html>
