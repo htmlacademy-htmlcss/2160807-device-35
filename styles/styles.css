@@ -63,10 +63,7 @@ body{
   width: 1160px;
 
 }
-.navigation a{
-  text-decoration: none;
-  color: black;
-}
+
 .user-login-list{
   list-style-type: none;
   padding: 0;
@@ -98,6 +95,9 @@ body{
   display: block;
   height: 100%;
   padding-left: 27px;
+  border: 2px solid transparent;
+  text-decoration: none;
+  color: black;
 }
 .user-login-item:hover{
   opacity: 60%;
@@ -124,12 +124,16 @@ body{
   margin-right: 36px;
   position: relative;
 }
-.user-menu-item a{
+.menu-right-compare,
+.menu-right-cart{
   display: block;
   height: 100%;
   padding-left: 24px;
+  border: 2px solid transparent;
+  text-decoration: none;
+  color: black;
 }
-.user-menu-item:hover{
+.user-menu-item a:hover{
   opacity: 60%;
 }
 .user-menu-item:active{
@@ -154,7 +158,7 @@ body{
   top: 9px;
   left: 0;
 }
-.user-menu-item:nth-child(2)::before{
+.menu-right-cart::before{
   content: " ";
   width: 16px;
   height: 14px;
@@ -164,6 +168,93 @@ body{
   background-repeat: no-repeat;
   top: 6px;
   left: 0;
+}
+.popover-cart{
+  position: absolute;
+  width: 320px;
+  min-height: 307px;
+  background-color: black;
+  right: -70px;
+  top: 40px;
+  z-index: 3;
+  padding: 20px;
+  box-sizing: border-box;
+  display: none;
+}
+.menu-right-cart:hover + .popover-cart{
+  display: block;
+}
+.popover-cart::before{
+  content: " ";
+  position: absolute;
+  width: 14px;
+  height: 6px;
+  background-image: url("../images/Vector-popover.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  right: 147px;
+  top: -5px;
+}
+.popover-cart-list{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+}
+.popover-cart-item{
+  box-sizing: border-box;
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  justify-content: space-between;
+}
+.popover-cart-item:first-child{
+  padding-top: 0;
+  background-image: url("../images/product-1-small.png");
+  background-repeat: no-repeat;
+}
+.popover-cart-item:nth-child(2){
+  background-image: url("../images/product-2-small.png");
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+}
+.popover-cart-link{
+  color: white;
+  text-decoration: none;
+display: block;
+padding-left: 62px;
+font-size: 16px;
+line-height: 20px;
+}
+.delete-product{
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  background-image: url("../images/button-delete.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.popover-cart-info{
+  background-color:#1A1A1A ;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-size: 16px;
+line-height: 20px;
+margin: 0 -20px;
+padding: 0 20px;
+}
+.popover-cart-button{
+width: 280px;
+height: 50px;
+background-color: white;
+font-size: 18px;
+line-height: 21px;
+letter-spacing: 3px;
+font-family: "Raleway";
+text-transform: uppercase;
+margin-top: 20px;
 }
 .menu-search{
   width: 517px;
@@ -182,17 +273,10 @@ body{
   border-right: none;
   font-size: 16px;
   line-height: 20px;
-}
-.menu-search::before{
-  content: " ";
-  width: 16px;
-  height: 16px;
-  position: absolute;
   background-image: url("../images/menu-search-icon.png");
-  background-position: center;
+  background-position-x: 16px;
+  background-position-y:10px ;
   background-repeat: no-repeat;
-  top: 12px;
-  left: 16px;
 }
 .menu-search:focus{
   outline: none;
@@ -229,6 +313,10 @@ body{
   min-width: 471px;
   justify-content: space-between;
 }
+.navigation-link{
+  text-decoration: none;
+  color: black;
+}
 .navigation-link:hover{
   opacity: 60%;
 }
@@ -248,7 +336,6 @@ body{
   background-color: rgba(255,255,255,0);
   text-align: left;
   padding: 0;
-  border: none;
   font-size: 18px;
   letter-spacing: 3px;
   position: relative;
@@ -256,6 +343,7 @@ body{
   background-position: right;
   background-repeat: no-repeat;
   cursor: pointer;
+  border: 2px solid transparent;
 }
 
 .catalog-header:hover,
@@ -269,9 +357,52 @@ body{
   outline: none;
   border: 2px solid #AF4FFF;
 }
+.catalog-header-dd{
+  position: relative;
+
+}
+.dropdown-catalog{
+  display: grid;
+  padding: 0;
+  padding-top: 14px;
+  padding-left: 60px;
+  position: absolute;
+  z-index: 3;
+  list-style: none;
+  margin: 0;
+  width: 1160px;
+  height: 165px;
+  grid-template-columns: repeat(3, 222px);
+  grid-template-rows: repeat(3, 40px);
+  background-color: #FFE17F;
+  box-sizing: border-box;
+  left: -60px;
+  grid-column-gap: 50px;
+display: none;
+}
+.dropdown-catalog-link{
+  font-size: 16px;
+  line-height: 18px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+.dropdown-catalog-link:hover{
+  opacity: 60% ;
+}
+.dropdown-catalog-link:active{
+  opacity: 30%;
+}
+.dropdown-catalog-link:focus{
+  border: 2px solid #AF4FFF;
+}
+.dropdown-catalog-item:last-child{
+  grid-column: 1;
+
+}
 .logo-header{
   position: absolute;
   top:20px;
+  border: 2px solid transparent;
 }
 .logo-header:hover{
   opacity: 60%;
@@ -359,7 +490,8 @@ padding-right: 12px;
   position: relative;
   background-color: rgba(255,255,255,0);
   box-sizing: border-box;
-    padding-top: 5px;
+    padding-top: 3px;
+    border: 2px solid transparent;
 }
 .slider-pagination-detailed::before{
   position: absolute;
@@ -367,12 +499,16 @@ padding-right: 12px;
   width: 220px;
   height: 8px;
   background-color: #FFE17F;
-  top: 15px;
-  left:0;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
   z-index: -1;
+  transition: background-color 0.25s ease-in-out, height 0.25s ease-in-out;
 }
-.slider-pagination-detailed:hover{
+.slider-pagination-detailed:hover::before{
   background-color: #FFE17F;
+  height: 100%;
+
 }
 .slider-pagination-detailed:active{
   background-color: #FFCC33;
@@ -482,6 +618,7 @@ padding-right: 12px;
   width: 164px;
   box-sizing: border-box;
   line-height: 24px;
+  border: 2px solid transparent;
 }
 .category-catalog-link{
   font-family: "Raleway";
@@ -717,17 +854,9 @@ z-index: 0;
   border: none;
   width: 125px;
   cursor: pointer;
-}
-.delivery-button-info span{
-  display: block;
-  width: 40px;
-  height: 40px;
-  background: rgba(220, 220, 220, 0.5);
-  text-align: center;
-  padding: 14px 0;
-  box-sizing: border-box;
-  border-radius: 50%;
-  margin: 0 auto;
+  background-image: url("../images/button-info.png");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .index-columns{
   display: flex;
@@ -767,9 +896,13 @@ z-index: 0;
     width: 270px;
     text-align: center;
   position: relative;
+  border: 2px solid transparent;
+  height: 40px;
+  padding-top: 10px;
   }
-  .about-link:hover{
+  .about-link:hover::before{
     background-color: #FFE17F;
+    height: 100%;
   }
   .about-link:active{
     background-color: #FFC700;
@@ -779,14 +912,16 @@ z-index: 0;
   border: 2px solid #AF4FFF;
   }
   .about-link::before{
-    content: " ";
-width: 270px;
-height: 8px;
-background-color: #FFE17F;
-position: absolute;
-top: 10px;
-left: 0;
-z-index: -1;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 5px;
+    width: 100%;
+    background-color: #FFE17F;
+    z-index: -1;
+    transition: background-color 0.25s ease-in-out, height 0.25s ease-in-out;
   }
 .contacts{
   margin-right: 18px;
@@ -805,9 +940,13 @@ z-index: -1;
     color: black;
     text-decoration: none;
     position: relative;
+    border: 2px solid transparent;
+    height: 40px;
+    padding-top: 10px;
 }
-.contacts-link:hover{
+.contacts-link:hover::before{
   background-color: #FFE17F;
+  height: 100%;
 }
 .contacts-link:active{
   background-color: #FFC700;
@@ -822,9 +961,11 @@ width: 260px;
 height: 8px;
 background-color: #FFE17F;
 position: absolute;
-top: 10px;
-left: 0;
+top:50%;
+left: 50%;
+transform: translate(-50%, -50%);
 z-index: -1;
+transition: background-color 0.25s ease-in-out, height 0.25s ease-in-out;
 }
 .contacts-address-text{
   margin-bottom: 0;
@@ -948,6 +1089,7 @@ border: 2px solid #AF4FFF;
     display: block;
     width: 145px;
     margin-bottom: 19px;
+    border: 2px solid transparent;
 }
 
 .logo-footer:hover{
@@ -977,6 +1119,7 @@ border: 2px solid #AF4FFF;
   text-decoration: none;
   color: white;
   letter-spacing: 4px;
+  border: 2px solid transparent;
 }
 .footer-menu-link:hover{
   color: #FFC700;
@@ -1000,6 +1143,7 @@ border: 2px solid #AF4FFF;
 .footer-contacts-phone{
   font-size: 16px;
   color: white;
+  border: 2px solid transparent;
 }
 .footer-contacts-phone:hover{
   color: #FFC700;
@@ -1041,6 +1185,7 @@ border: 2px solid #AF4FFF;
   height: 40px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.3);
+  border: 2px solid transparent;
 }
 .button-social:hover{
   background-color: #FFC700;
@@ -1061,18 +1206,13 @@ border: 2px solid #AF4FFF;
   margin: 0;
 }
 .html-academy-link{
-  background-image: url("../images/html_logo.png");
-  background-repeat: no-repeat;
-  display: block;
-  width: 115px;
-  height: 33px;
+  border: 2px solid transparent;
 }
-.html-academy-link:hover{
-  background-image: url("../images/html-logo-hover.png");
+.html-academy-link:hover path{
+fill: white;
 }
-.html-academy-link:active{
-  background-image: url("../images/html-logo-hover.png");
-  opacity: 30%;
+.html-academy-link:active path{
+  fill:rgba(255, 255, 255, 0.3);
 }
 .html-academy-link:focus{
   border: 2px solid #AF4FFF;
@@ -1107,7 +1247,6 @@ border: 2px solid #AF4FFF;
   list-style-type: none;
 }
 .breadcrumbs-link{
-  position: relative;
   font-size: 16px;
   margin-right: 36px;
   color: black;
@@ -1122,7 +1261,10 @@ border: 2px solid #AF4FFF;
 .breadcrumbs-link:focus{
   border: 2px solid #AF4FFF;
 }
-.breadcrumbs-link::before{
+.breadcrumbs-item{
+  position: relative;
+}
+.breadcrumbs-item:not(:last-child):before{
   content: " ";
   position: absolute;
   width: 4px;
@@ -1130,8 +1272,9 @@ border: 2px solid #AF4FFF;
   background-image: url("../images/breadcrumbs.png");
   background-position: center;
   background-repeat: no-repeat;
-  top:7px;
-  right: -16px;
+  top: 13px;
+  right: 20px;
+
 }
 .catalog-filter-products{
   width: 320px;
@@ -1187,7 +1330,7 @@ top: -12px;
  cursor: pointer;
 }
 .range-toggle:hover{
-  opacity: 50%;
+  border-color: rgba(0, 0, 0, 0.5);
 }
 .range-toggle:active{
   background-color: black;
