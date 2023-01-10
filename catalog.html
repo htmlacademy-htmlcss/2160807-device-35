@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
@@ -31,12 +33,52 @@
     <a href="#" class="menu-right-compare">Сравнить</a>
   </li>
   <li class="user-menu-item">
+    <span class="cart-number">2</span>
     <a href="#" class="menu-right-cart">Корзина</a>
+    <div class="popover-cart">
+      <ul class="popover-cart-list">
+        <li class="popover-cart-item">
+          <a href="#" class="popover-cart-link">Любительская<br>селфи-палка</a>
+          <button class="delete-product"></button>
+        </li>
+        <li class="popover-cart-item">
+          <a href="#" class="popover-cart-link">Профессиональная<br>селфи-палка</a>
+          <button class="delete-product"></button>
+        </li>
+      </ul>
+      <div class="popover-cart-info">
+      <p class="popover-cart-number">Товаров: 2</p>
+      <p class="popever-cart-sum">Сумма: 2000 ₽</p>
+      </div>
+      <button class="popover-cart-button">Открыть корзину</button>
+      </div>
   </li>
   </ul>
   </div>
   <h2 class="visually-hidden">Навигация сайта</h2>
-  <button class="catalog-header">Каталог товаров</button>
+  <div class="catalog-header-dd">
+    <button class="catalog-header">Каталог товаров</button>
+    <ul class="dropdown-catalog">
+       <li class="dropdown-catalog-item">
+        <a href="#" class="dropdown-catalog-link">Виртуальная реальность</a>
+       </li>
+       <li class="dropdown-catalog-item">
+        <a href="#" class="dropdown-catalog-link">Фитнес-браслеты</a>
+       </li>
+       <li class="dropdown-catalog-item">
+        <a href="#" class="dropdown-catalog-link">Квадрокоптеры</a>
+       </li>
+       <li class="dropdown-catalog-item">
+        <a href="#" class="dropdown-catalog-link">Моноподы для селфи</a>
+       </li>
+       <li class="dropdown-catalog-item">
+        <a href="#" class="dropdown-catalog-link">Умные часы</a>
+       </li>
+       <li class="dropdown-catalog-item">
+        <a href="#" class="dropdown-catalog-link">Экшн-камеры</a>
+       </li>
+    </ul>
+    </div>
   <ul class="navigation-list">
     <li class="navigation-item">
       <a href="#" class="navigation-link">Доставка</a>

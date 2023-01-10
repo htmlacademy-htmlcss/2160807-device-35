@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
@@ -28,6 +30,7 @@
     <a href="#" class="menu-right-compare">Сравнить</a>
   </li>
   <li class="user-menu-item">
+    <span class="cart-number">2</span>
     <a href="#" class="menu-right-cart">Корзина</a>
     <div class="popover-cart">
       <ul class="popover-cart-list">
@@ -320,5 +323,40 @@
     </a>
     </div>
 </footer>
+<div class="modal-conteiner">
+  <div class="modal-window">
+   <h2 class="modal-title">Доставка под заказ</h2>
+   <button class="modal-closer" type="button"> </button>
+   <form class="modal-window-form" action="https://echo.htmlacademy.ru/" method="post">
+    <div class="modal-form-name field-group">
+      <label class="modal-form-subtitle" for="modal-name">Ваше имя:</label>
+      <input class="modal-form-name-field modal-field" type="text" id="modal-name" placeholder="Введите имя" required>
+    </div>
+    <div class="modal-form-mail field-group">
+      <label class="modal-form-subtitle" for="modal-mail">Ваш e-mail:</label>
+      <input class="modal-form-mail-field modal-field" type="text" id="modal-mail" placeholder="Введите e-mail" required>
+    </div>
+    <div class="modal-form-product field-group">
+      <label class="modal-form-subtitle" for="modal-product">Что нужно привезти:</label>
+      <input class="modal-form-product-field modal-field" type="text" id="modal-product" placeholder="В свободной форме" required>
+    </div>
+    <div class="modal-form-number field-group">
+      <label class="modal-form-subtitle" for="modal-number">Количество:</label>
+      <span class="tooltip">
+        <button class="number-info">i</button>
+          <span class="number-info-text">Постараемся найти,<br>сколько нужно.<br>Привезём сколько<br>получится по<br>требованиям<br>к провозу багажа.</span>
+      </span>
+      <p class="form-number">
+      <button class="modal-form-number-minus" type="button"> </button>
+      <input class="modal-form-number-field modal-field" type="text" id="modal-number" value="1"  required>
+      <button class="modal-form-number-plus" type="button"> </button>
+      </p>
+    </div>
+    <div class="modal-submit">
+      <button class="modal-submit-button" type="submit">Отправить</button>
+    </div>
+   </form>
+  </div>
+</div>
   </body>
 </html>
